@@ -1,7 +1,7 @@
 const connectToDatabase = require("../../utils/mongodb");
 
 module.exports = async (req, res) => {
-  const db = await connectToDatabase(process.env.MONGO_URL);
+  const db = await connectToDatabase(process.env.MONGODB_URI);
   const trafficCollection = db.collection("traffic");
 
   //const employee = await employeeCollection.findOne({ UID: uid });
