@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
   gateFound = await gateCollection.updateOne(
     { gateName: gate },
-    { $set: { data } }
+    { $set: data  }
   );
 
  gateFound.nModified > 0
